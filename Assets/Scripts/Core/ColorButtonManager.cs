@@ -1,11 +1,10 @@
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ColorButtonManager : MonoBehaviour
 {
-    public string paletteFilePath = "Assets/palette.txt"; // Path to the .txt palette file
+    private string fileName = "palette.txt"; // Path to the .txt palette file
     public GameObject buttonPrefab; // Button prefab to be instantiated
     public Transform buttonPanel; // Panel where buttons will be added
 
@@ -14,39 +13,44 @@ public class ColorButtonManager : MonoBehaviour
     void Start()
     {
         // Load colors from the palette file
-        LoadPalette(paletteFilePath);
+        LoadPalette(fileName);
 
         // Create buttons for each color in the palette
         CreateButtonsWithColors();
     }
 
     // Function to load the palette from the .txt file
-    void LoadPalette(string filePath)
+    // Function to load the palette from a .txt file inside Resources
+    void LoadPalette(string fileName)
     {
-        if (File.Exists(filePath))
+        // Remove extensão caso seja passada
+        if (fileName.EndsWith(".txt"))
         {
-            // Read all lines from the file
-            string[] lines = File.ReadAllLines(filePath);
+            fileName = fileName.Substring(0, fileName.Length - 4);
+        }
+
+        // Carregar o ficheiro da pasta Resources
+        TextAsset textAsset = Resources.Load<TextAsset>(fileName);
+
+        if (textAsset != null)
+        {
+            string[] lines = textAsset.text.Split(new[] { "\r\n", "\n" }, System.StringSplitOptions.None);
 
             foreach (var line in lines)
             {
-                // Skip comments (lines starting with ;)
                 if (line.StartsWith(";") || string.IsNullOrWhiteSpace(line))
                     continue;
 
-                // Parse the HEX color string (first 2 characters are alpha, next 6 are RGB)
-                string hexColor = line.Trim(); // Remove any extra spaces or newlines
-                if (hexColor.Length == 8) // Ensure it's in the correct format: AARRGGBB
+                string hexColor = line.Trim();
+                if (hexColor.Length == 8)
                 {
-                    // Extract alpha (AA), red (RR), green (GG), blue (BB) from the string
                     byte alpha = byte.Parse(hexColor.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
                     byte red = byte.Parse(hexColor.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
                     byte green = byte.Parse(hexColor.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
                     byte blue = byte.Parse(hexColor.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
 
-                    // Convert to Unity's Color (where each component is between 0 and 1)
                     Color color = new Color(red / 255f, green / 255f, blue / 255f, alpha / 255f);
-                    colorPalette.Add(color); // Add the color to the list
+                    colorPalette.Add(color);
                 }
                 else
                 {
@@ -56,9 +60,10 @@ public class ColorButtonManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Palette file not found!");
+            Debug.LogError($"Palette file '{fileName}' not found in Resources!");
         }
     }
+
 
     // Function to create buttons and apply colors from the palette
     void CreateButtonsWithColors()

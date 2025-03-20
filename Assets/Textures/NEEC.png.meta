@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 273f26561d0d4fb48b955e37798ec3bf
+guid: b9b751bd251aad04a8f74e6e64a590ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -618131947217897731
-    second: "Logos-N\xFAcleos-07_0"
+      213: 332400182967656793
+    second: NEEC_0
   - first:
-      213: -422298777622427895
-    second: "Logos-N\xFAcleos-07_1"
+      213: 742395144500000246
+    second: NEEC_1
   - first:
-      213: 3274827395077218986
-    second: "Logos-N\xFAcleos-07_2"
+      213: -2423077535880199162
+    second: NEEC_2
   - first:
-      213: -3462563668777678986
-    second: "Logos-N\xFAcleos-07_3"
+      213: 6469120900720890619
+    second: NEEC_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Logos-N\xFAcleos-07_0"
+      name: NEEC_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 2
-        width: 311
-        height: 355
+        width: 732
+        height: 828
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df6b1cdd444fb67f0800000000000000
-      internalID: -618131947217897731
+      spriteID: 951ef0d843cec9400800000000000000
+      internalID: 332400182967656793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Logos-N\xFAcleos-07_1"
+      name: NEEC_1
       rect:
         serializedVersion: 2
-        x: 363
-        y: 1
-        width: 248
-        height: 356
+        x: 854
+        y: 0
+        width: 585
+        height: 830
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 907cbbacf71b32af0800000000000000
-      internalID: -422298777622427895
+      spriteID: 6f5b5e653748d4a00800000000000000
+      internalID: 742395144500000246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Logos-N\xFAcleos-07_2"
+      name: NEEC_2
       rect:
         serializedVersion: 2
-        x: 659
-        y: 1
-        width: 249
-        height: 357
+        x: 1559
+        y: 0
+        width: 585
+        height: 830
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa2ab404a26827d20800000000000000
-      internalID: 3274827395077218986
+      spriteID: 604c1a2b1df7f5ed0800000000000000
+      internalID: -2423077535880199162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Logos-N\xFAcleos-07_3"
+      name: NEEC_3
       rect:
         serializedVersion: 2
-        x: 951
-        y: 2
-        width: 258
-        height: 355
+        x: 2259
+        y: 6
+        width: 601
+        height: 823
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 677455e40b082ffc0800000000000000
-      internalID: -3462563668777678986
+      spriteID: bf216803f2fe6c950800000000000000
+      internalID: 6469120900720890619
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Logos-N\xFAcleos-07_0": -618131947217897731
-      "Logos-N\xFAcleos-07_1": -422298777622427895
-      "Logos-N\xFAcleos-07_2": 3274827395077218986
-      "Logos-N\xFAcleos-07_3": -3462563668777678986
+      NEEC_0: 332400182967656793
+      NEEC_1: 742395144500000246
+      NEEC_2: -2423077535880199162
+      NEEC_3: 6469120900720890619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

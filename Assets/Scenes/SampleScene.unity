@@ -6098,7 +6098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 273f26561d0d4fb48b955e37798ec3bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9b751bd251aad04a8f74e6e64a590ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6189,7 +6189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c60404a2bd248b4ebd2c30527bf5e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paletteFilePath: Assets/palette.txt
   buttonPrefab: {fileID: 2978921691758429073, guid: aab7aabf299b6e845bfeb08753441544, type: 3}
   buttonPanel: {fileID: 1557165943}
 --- !u!1 &1583193920
@@ -6552,7 +6551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7490196}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
