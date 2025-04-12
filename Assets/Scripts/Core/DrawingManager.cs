@@ -13,7 +13,7 @@ public class DrawingManager : MonoBehaviour
     private ColorManager colorManager;
     private UndoRedoManager undoRedoManager;
 
-    [SerializeField] private GameObject saveWarning;
+    [SerializeField] private GameObject[] warnings;
     Color[,] initialState;
 
     void Awake()
@@ -36,8 +36,13 @@ public class DrawingManager : MonoBehaviour
 
     void Update()
     {
-        if (saveWarning.activeSelf)
-            return;
+        foreach (var warning in warnings)
+        {
+            if (warning.activeSelf)
+            {
+                return;
+            }
+        }
         if (Input.GetMouseButtonDown(0))
         {
             initialState = undoRedoManager.CaptureCurrentState();
